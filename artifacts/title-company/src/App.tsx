@@ -1,31 +1,39 @@
 import './index.css';
 
-import Navbar from './site/Navbar';
-import Hero from './site/Hero';
-import TrustBar from './site/TrustBar';
-import Services from './site/Services';
-import WhyChoose from './site/WhyChoose';
-import About from './site/About';
-import Locations from './site/Locations';
-import Contact from './site/Contact';
-import Footer from './site/Footer';
-import BackToTop from './site/BackToTop';
+import { Route, Switch } from 'wouter';
+
+import Nav from './site/layout/Nav';
+import Footer from './site/layout/Footer';
+import Concierge from './site/layout/Concierge';
+import ScrollToTop from './site/layout/ScrollToTop';
+
+import Home from './site/pages/Home';
+import Services from './site/pages/Services';
+import Realtors from './site/pages/Realtors';
+import About from './site/pages/About';
+import Locations from './site/pages/Locations';
+import Contact from './site/pages/Contact';
+
+import { ROUTES } from './site/data';
 
 export default function App() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <ScrollToTop />
+      <Nav />
       <main>
-        <Hero />
-        <TrustBar />
-        <Services />
-        <WhyChoose />
-        <About />
-        <Locations />
-        <Contact />
+        <Switch>
+          <Route path={ROUTES.home} component={Home} />
+          <Route path={ROUTES.services} component={Services} />
+          <Route path={ROUTES.realtors} component={Realtors} />
+          <Route path={ROUTES.about} component={About} />
+          <Route path={ROUTES.locations} component={Locations} />
+          <Route path={ROUTES.contact} component={Contact} />
+          <Route component={Home} />
+        </Switch>
       </main>
       <Footer />
-      <BackToTop />
+      <Concierge />
     </div>
   );
 }
