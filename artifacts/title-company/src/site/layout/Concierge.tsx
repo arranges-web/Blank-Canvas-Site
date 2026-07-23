@@ -125,7 +125,7 @@ export default function Concierge() {
               <button onClick={dismissTeaser} className="absolute -right-2 -top-2 grid h-6 w-6 place-items-center rounded-full bg-navy text-cream" aria-label="Dismiss">
                 <X className="h-3.5 w-3.5" />
               </button>
-              <p className="text-sm leading-snug text-navy">
+              <p className="text-[0.82rem] leading-snug text-navy">
                 Hi, I'm <span className="font-semibold">Ava</span> — need a quick hand with a quote or closing?
               </p>
               <button onClick={openChat} className="mt-2 text-sm font-semibold text-orange hover:underline">

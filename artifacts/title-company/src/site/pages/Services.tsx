@@ -121,7 +121,7 @@ export default function Services() {
         <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker>How It Works</Kicker>
-            <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">A calm, coordinated closing</h2>
+            <h2 className="mt-5 font-display text-[1.55rem] font-semibold text-navy sm:text-4xl lg:text-5xl">A calm, coordinated closing</h2>
           </Reveal>
           <div className="mt-10 sm:mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {PROCESS.map((s, i) => (

@@ -41,7 +41,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.1 }}
-              className="mt-6 max-w-2xl font-display text-[2rem] font-semibold leading-[1.08] text-cream sm:text-[3.4rem] lg:text-[4.4rem]"
+              className="mt-5 max-w-2xl font-display text-[1.85rem] font-semibold leading-[1.1] text-cream sm:text-[3.4rem] lg:text-[4.4rem]"
             >
               The art of a flawless <span className="script text-champagne">closing.</span>
             </motion.h1>
@@ -131,7 +131,7 @@ export default function Home() {
               <div className="overflow-hidden rounded-[2rem] shadow-float">
                 <img src="/assets/about-bg.jpg" alt="A Florida Hometown closing" className="h-[28rem] w-full object-cover" loading="lazy" />
               </div>
-              <div className="absolute -bottom-8 -right-4 flex w-60 items-center gap-4 rounded-2xl border border-border bg-white p-5 shadow-float sm:right-8">
+              <div className="absolute inset-x-3 -bottom-6 flex items-center gap-4 rounded-2xl border border-border bg-white p-4 shadow-float sm:inset-x-auto sm:right-8 sm:w-60 sm:p-5">
                 <span className="font-display text-4xl font-semibold text-navy sm:text-5xl"><Counter to={20} suffix="+" /></span>
                 <p className="text-sm text-muted-foreground">years guiding Southwest Florida home</p>
               </div>
@@ -139,17 +139,17 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.1}>
             <Kicker>Our Promise</Kicker>
-            <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">
+            <h2 className="mt-5 font-display text-[1.55rem] font-semibold text-navy sm:text-4xl lg:text-5xl">
               A closing should feel <span className="script text-orange">calm</span>, not chaotic.
             </h2>
             <p className="mt-6 text-[0.95rem] sm:text-lg leading-relaxed text-muted-foreground">{COMPANY.mission}</p>
-            <div className="mt-8 grid grid-cols-3 gap-4">
+            <div className="mt-8 grid grid-cols-3 gap-2.5 sm:gap-4">
               {PILLARS.map((p) => {
                 const Icon = PILLAR_ICON[p.icon];
                 return (
-                  <div key={p.title} className="rounded-2xl border border-border bg-white p-4 text-center shadow-soft">
-                    <Icon className="mx-auto h-6 w-6 text-champagne" />
-                    <p className="mt-2 font-display text-lg text-navy">{p.title}</p>
+                  <div key={p.title} className="rounded-2xl border border-border bg-white p-3 text-center shadow-soft sm:p-4">
+                    <Icon className="mx-auto h-5 w-5 text-champagne sm:h-6 sm:w-6" />
+                    <p className="mt-1.5 font-display text-[0.78rem] font-medium leading-tight text-navy sm:mt-2 sm:text-lg">{p.title}</p>
                   </div>
                 );
               })}
@@ -164,7 +164,7 @@ export default function Home() {
           <Reveal className="flex flex-col items-end justify-between gap-6 sm:flex-row">
             <div className="max-w-xl">
               <Kicker>What We Do</Kicker>
-              <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">
+              <h2 className="mt-5 font-display text-[1.55rem] font-semibold text-navy sm:text-4xl lg:text-5xl">
                 Full-service title &amp; escrow, under one roof
               </h2>
             </div>
@@ -206,7 +206,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-[1280px] px-6 lg:px-8">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker light>Why Florida Hometown</Kicker>
-            <h2 className="mt-5 font-display text-[1.7rem] font-semibold sm:text-4xl lg:text-5xl">
+            <h2 className="mt-5 font-display text-[1.55rem] font-semibold sm:text-4xl lg:text-5xl">
               Excellence, <span className="script text-champagne">quietly delivered</span>
             </h2>
           </Reveal>
@@ -245,7 +245,7 @@ export default function Home() {
         <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker>The Journey</Kicker>
-            <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">Four steps to the keys</h2>
+            <h2 className="mt-5 font-display text-[1.55rem] font-semibold text-navy sm:text-4xl lg:text-5xl">Four steps to the keys</h2>
           </Reveal>
           <div className="mt-10 sm:mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {PROCESS.map((step, i) => (
@@ -270,7 +270,7 @@ export default function Home() {
           <Reveal className="flex flex-col items-end justify-between gap-6 sm:flex-row">
             <div className="max-w-xl">
               <Kicker>Our Locations</Kicker>
-              <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">Six offices, one local team</h2>
+              <h2 className="mt-5 font-display text-[1.55rem] font-semibold text-navy sm:text-4xl lg:text-5xl">Six offices, one local team</h2>
             </div>
             <BrandButton to={ROUTES.locations} variant="outline" size="sm">All locations <ArrowUpRight className="h-4 w-4" /></BrandButton>
           </Reveal>

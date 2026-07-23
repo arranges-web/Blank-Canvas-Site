@@ -24,7 +24,7 @@ export default function Realtors() {
         <div className="mx-auto grid max-w-[1280px] items-center gap-10 px-6 lg:gap-14 lg:grid-cols-2 lg:px-8">
           <Reveal>
             <Kicker>A Partner, Not a Vendor</Kicker>
-            <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">
+            <h2 className="mt-5 font-display text-[1.55rem] font-semibold text-navy sm:text-4xl lg:text-5xl">
               Closings that protect your <span className="script text-orange">dates</span> and your name
             </h2>
             <p className="mt-6 text-[0.95rem] sm:text-lg leading-relaxed text-muted-foreground">
@@ -56,7 +56,7 @@ export default function Realtors() {
         <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker>Why Agents Choose Us</Kicker>
-            <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">
+            <h2 className="mt-5 font-display text-[1.55rem] font-semibold text-navy sm:text-4xl lg:text-5xl">
               Everything you need to close with ease
             </h2>
           </Reveal>

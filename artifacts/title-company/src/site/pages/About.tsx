@@ -34,7 +34,7 @@ export default function About() {
           </Reveal>
           <Reveal delay={0.1}>
             <Kicker>Our Story</Kicker>
-            <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">
+            <h2 className="mt-5 font-display text-[1.55rem] font-semibold text-navy sm:text-4xl lg:text-5xl">
               Built on trust, run like a <span className="script text-orange">boutique</span>
             </h2>
             <p className="mt-6 text-[0.95rem] sm:text-lg leading-relaxed text-muted-foreground">{COMPANY.mission}</p>
@@ -55,7 +55,7 @@ export default function About() {
         <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker>What We Stand For</Kicker>
-            <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">Three words, held to the letter</h2>
+            <h2 className="mt-5 font-display text-[1.55rem] font-semibold text-navy sm:text-4xl lg:text-5xl">Three words, held to the letter</h2>
           </Reveal>
           <div className="mt-10 sm:mt-14 grid gap-6 md:grid-cols-3">
             {PILLARS.map((p, i) => {
@@ -93,7 +93,7 @@ export default function About() {
         <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker>Who We Serve</Kicker>
-            <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">Tailored closings for every party</h2>
+            <h2 className="mt-5 font-display text-[1.55rem] font-semibold text-navy sm:text-4xl lg:text-5xl">Tailored closings for every party</h2>
           </Reveal>
           <div className="mt-10 sm:mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {AUDIENCES.map((a, i) => {

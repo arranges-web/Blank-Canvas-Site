@@ -27,7 +27,7 @@ export default function CostEstimator() {
       <div className="relative mx-auto max-w-[1280px] px-6 lg:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <Kicker light>Interactive Tool</Kicker>
-          <h2 className="mt-5 font-display text-[1.7rem] font-semibold sm:text-4xl lg:text-5xl">
+          <h2 className="mt-5 font-display text-[1.55rem] font-semibold sm:text-4xl lg:text-5xl">
             Estimate your <span className="script text-champagne">closing costs</span>
           </h2>
           <p className="mt-4 text-[0.95rem] text-cream/70 sm:text-lg">

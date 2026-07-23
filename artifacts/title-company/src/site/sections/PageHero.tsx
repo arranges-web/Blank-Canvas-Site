@@ -45,7 +45,7 @@ export default function PageHero({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.12, duration: 0.7 }}
-          className="mt-4 max-w-3xl font-display text-3xl font-semibold text-cream sm:text-5xl lg:text-6xl"
+          className="mt-4 max-w-3xl font-display text-[1.7rem] font-semibold leading-[1.12] text-cream sm:text-5xl lg:text-6xl"
         >
           {title} {italic && <span className="script text-champagne">{italic}</span>}
         </motion.h1>
