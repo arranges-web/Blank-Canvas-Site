@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+/* ============================================================
+   Florida Hometown Title & Escrow — Brand Design System
+   Navy #0B1E3F · Orange #F36F21 · Poppins + Open Sans
+   ============================================================ */
+
 @theme inline {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -10,33 +15,153 @@
   --color-muted: hsl(var(--muted));
   --color-muted-foreground: hsl(var(--muted-foreground));
   --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
   --color-border: hsl(var(--border));
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
-  --font-sans: 'Georgia', serif;
+  --color-navy: hsl(var(--navy));
+  --color-navy-800: hsl(var(--navy-800));
+  --color-navy-700: hsl(var(--navy-700));
+  --color-orange: hsl(var(--orange));
+  --color-orange-600: hsl(var(--orange-600));
+
+  --font-sans: 'Open Sans', system-ui, sans-serif;
+  --font-display: 'Poppins', system-ui, sans-serif;
+
+  --radius: 0.75rem;
 }
 
 :root {
-  --background: 210 20% 98%;
-  --foreground: 215 40% 15%;
-  --primary: 215 60% 22%;
+  --background: 0 0% 100%;
+  --foreground: 218 45% 12%;
+
+  --navy: 218 70% 15%;      /* #0B1E3F  brand navy */
+  --navy-800: 218 62% 11%;  /* deeper   */
+  --navy-700: 216 52% 22%;  /* lighter panel */
+  --orange: 22 89% 54%;     /* #F36F21  brand orange */
+  --orange-600: 20 90% 48%;
+
+  --primary: 218 70% 15%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 42 70% 50%;
-  --secondary-foreground: 215 40% 15%;
-  --muted: 210 15% 92%;
-  --muted-foreground: 215 20% 45%;
-  --accent: 42 70% 50%;
-  --border: 210 20% 85%;
+  --secondary: 22 89% 54%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 22 89% 54%;
+  --accent-foreground: 0 0% 100%;
+
+  --muted: 214 32% 96%;
+  --muted-foreground: 216 18% 42%;
+  --border: 214 24% 90%;
   --card: 0 0% 100%;
-  --card-foreground: 215 40% 15%;
+  --card-foreground: 218 45% 12%;
 }
 
 @layer base {
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    font-family: Georgia, serif;
-    line-height: 1.6;
+    font-family: var(--font-sans);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
+
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  ::selection {
+    background: hsl(var(--orange) / 0.9);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar { width: 11px; }
+  ::-webkit-scrollbar-track { background: hsl(var(--muted)); }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--navy) / 0.35);
+    border-radius: 99px;
+    border: 3px solid hsl(var(--muted));
+  }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(var(--navy) / 0.6); }
+}
+
+/* ---------- Reusable brand utilities ---------- */
+@layer utilities {
+  .eyebrow {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: hsl(var(--orange));
+  }
+
+  .text-gradient-navy {
+    background: linear-gradient(120deg, hsl(var(--navy)) 0%, hsl(var(--navy-700)) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glass {
+    background: hsl(var(--navy) / 0.55);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+  }
+
+  .glass-light {
+    background: hsl(0 0% 100% / 0.72);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 1px 2px hsl(var(--navy) / 0.04),
+                0 8px 24px -12px hsl(var(--navy) / 0.18);
+  }
+  .shadow-float {
+    box-shadow: 0 2px 4px hsl(var(--navy) / 0.05),
+                0 24px 60px -20px hsl(var(--navy) / 0.30);
+  }
+  .shadow-glow-orange {
+    box-shadow: 0 10px 30px -8px hsl(var(--orange) / 0.5);
+  }
+}
+
+/* ---------- Keyframe animations ---------- */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(-14px) }
+}
+@keyframes marquee {
+  from { transform: translateX(0) }
+  to { transform: translateX(-50%) }
+}
+@keyframes pulse-ring {
+  0% { transform: scale(0.85); opacity: 0.7 }
+  70% { transform: scale(1.7); opacity: 0 }
+  100% { opacity: 0 }
+}
+
+.animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+.animate-marquee { animation: marquee 34s linear infinite; }
+
+.dot-grid {
+  background-image: radial-gradient(hsl(var(--navy) / 0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
 }
