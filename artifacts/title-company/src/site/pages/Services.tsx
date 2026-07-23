@@ -37,7 +37,7 @@ export default function Services() {
       />
       <TrustStrip />
 
-      <section id="services" className="bg-cream py-24 sm:py-28">
+      <section id="services" className="bg-cream py-14 sm:py-20 lg:py-28">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
             {/* Selector */}
@@ -117,13 +117,13 @@ export default function Services() {
       </section>
 
       {/* Process */}
-      <section className="bg-white py-24 sm:py-28">
+      <section className="bg-white py-14 sm:py-20 lg:py-28">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker>How It Works</Kicker>
-            <h2 className="mt-5 font-display text-4xl font-medium text-navy sm:text-5xl">A calm, coordinated closing</h2>
+            <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">A calm, coordinated closing</h2>
           </Reveal>
-          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 sm:mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {PROCESS.map((s, i) => (
               <Reveal key={s.num} delay={i * 0.08}>
                 <div className="h-full rounded-3xl border border-border bg-cream p-7 shadow-soft">

@@ -20,25 +20,25 @@ export default function CostEstimator() {
   const shown = est.items.filter((i) => i.who === view);
 
   return (
-    <section id="estimator" className="relative overflow-hidden bg-navy py-24 text-cream sm:py-32">
+    <section id="estimator" className="relative overflow-hidden bg-navy py-14 text-cream sm:py-20 lg:py-32">
       <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-champagne/10 blur-[130px]" />
       <div className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-orange/10 blur-[130px]" />
 
       <div className="relative mx-auto max-w-[1280px] px-6 lg:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <Kicker light>Interactive Tool</Kicker>
-          <h2 className="mt-5 font-display text-4xl font-medium sm:text-5xl">
+          <h2 className="mt-5 font-display text-[1.7rem] font-semibold sm:text-4xl lg:text-5xl">
             Estimate your <span className="script text-champagne">closing costs</span>
           </h2>
-          <p className="mt-4 text-lg text-cream/70">
+          <p className="mt-4 text-[0.95rem] text-cream/70 sm:text-lg">
             Move the sliders to preview Florida title insurance and closing costs in real time — no email required.
           </p>
         </Reveal>
 
-        <div className="mx-auto mt-14 grid max-w-5xl gap-6 lg:grid-cols-[1fr_1fr]">
+        <div className="mx-auto mt-10 sm:mt-14 grid max-w-5xl gap-6 lg:grid-cols-[1fr_1fr]">
           {/* Controls */}
           <Reveal>
-            <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-7 sm:p-8">
+            <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 sm:p-8">
               <label className="flex items-center gap-2 text-sm font-semibold text-cream/80">
                 <Landmark className="h-4 w-4 text-champagne" /> Purchase price
               </label>
@@ -110,7 +110,7 @@ export default function CostEstimator() {
               <div className="flex items-center gap-2 text-sm font-semibold text-muted-foreground">
                 <Calculator className="h-4 w-4 text-orange" /> Estimated {view} costs
               </div>
-              <div className="mt-2 font-display text-5xl font-semibold text-navy">
+              <div className="mt-2 font-display text-4xl font-semibold text-navy sm:text-5xl">
                 <AnimatedMoney value={viewTotal} />
               </div>
 

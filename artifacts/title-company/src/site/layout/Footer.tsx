@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="mx-auto flex max-w-[1280px] flex-col items-start justify-between gap-6 px-6 py-14 lg:flex-row lg:items-center lg:px-8">
           <div>
             <Kicker light>Let's begin</Kicker>
-            <h2 className="mt-4 max-w-xl font-display text-3xl font-medium text-cream sm:text-4xl">
+            <h2 className="mt-4 max-w-xl font-display text-2xl font-semibold text-cream sm:text-4xl">
               Ready for a closing that feels <span className="script text-champagne">effortless</span>?
             </h2>
           </div>

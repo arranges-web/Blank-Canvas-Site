@@ -15,7 +15,7 @@ export default function Locations() {
         crumb="Locations"
       />
 
-      <section className="bg-cream py-24 sm:py-28">
+      <section className="bg-cream py-14 sm:py-20 lg:py-28">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {LOCATIONS.map((l, i) => (
@@ -50,9 +50,9 @@ export default function Locations() {
           </div>
 
           <Reveal delay={0.15}>
-            <div className="mt-14 flex flex-col items-center gap-4 rounded-3xl border border-border bg-navy px-8 py-12 text-center text-cream">
+            <div className="mt-10 sm:mt-14 flex flex-col items-center gap-4 rounded-3xl border border-border bg-navy px-8 py-12 text-center text-cream">
               <Kicker light>Not sure which office?</Kicker>
-              <h2 className="max-w-xl font-display text-3xl font-medium sm:text-4xl">
+              <h2 className="max-w-xl font-display text-2xl font-semibold sm:text-4xl">
                 Tell us about your closing and we'll route you to the right team
               </h2>
               <div className="mt-2">

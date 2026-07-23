@@ -130,8 +130,8 @@
   .kicker {
     font-family: var(--font-sans);
     font-weight: 700;
-    font-size: 0.72rem;
-    letter-spacing: 0.32em;
+    font-size: 0.68rem;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
   }
 
@@ -143,8 +143,8 @@
     font-weight: 600;
     letter-spacing: 0;
     line-height: 1;
-    font-size: 1.14em;
-    padding-right: 0.06em;
+    font-size: 1.06em;
+    padding-right: 0.04em;
   }
 
   /* thin metallic rule */

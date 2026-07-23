@@ -20,14 +20,14 @@ export default function Realtors() {
       />
 
       {/* Intro + stat rail */}
-      <section className="bg-cream py-24 sm:py-28">
-        <div className="mx-auto grid max-w-[1280px] items-center gap-14 px-6 lg:grid-cols-2 lg:px-8">
+      <section className="bg-cream py-14 sm:py-20 lg:py-28">
+        <div className="mx-auto grid max-w-[1280px] items-center gap-10 px-6 lg:gap-14 lg:grid-cols-2 lg:px-8">
           <Reveal>
             <Kicker>A Partner, Not a Vendor</Kicker>
-            <h2 className="mt-5 font-display text-4xl font-medium text-navy sm:text-5xl">
+            <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">
               Closings that protect your <span className="script text-orange">dates</span> and your name
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-6 text-[0.95rem] sm:text-lg leading-relaxed text-muted-foreground">
               A missed closing date is a lost commission and a bruised reputation. Our disciplined process, proactive
               communication, and thorough curative work keep your transactions on schedule and your clients raving —
               which is exactly how great agents build their next deal.
@@ -52,15 +52,15 @@ export default function Realtors() {
       </section>
 
       {/* Benefits grid */}
-      <section className="bg-white py-24 sm:py-28">
+      <section className="bg-white py-14 sm:py-20 lg:py-28">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker>Why Agents Choose Us</Kicker>
-            <h2 className="mt-5 font-display text-4xl font-medium text-navy sm:text-5xl">
+            <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">
               Everything you need to close with ease
             </h2>
           </Reveal>
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 sm:mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {REALTOR_BENEFITS.map((b, i) => {
               const Icon = ICON[b.icon];
               return (
@@ -84,7 +84,7 @@ export default function Realtors() {
         <div className="pointer-events-none absolute -right-40 top-0 h-96 w-96 rounded-full bg-champagne/10 blur-[120px]" />
         <div className="relative mx-auto max-w-3xl px-6 text-center lg:px-8">
           <Stars className="mx-auto justify-center" />
-          <blockquote className="mt-6 font-display text-3xl font-medium leading-snug sm:text-4xl">
+          <blockquote className="mt-6 font-display text-2xl font-medium leading-snug sm:text-3xl lg:text-4xl">
             “They treat my clients like their own. In this market, a title partner who protects the closing date is
             worth <span className="script text-champagne">everything</span>.”
           </blockquote>

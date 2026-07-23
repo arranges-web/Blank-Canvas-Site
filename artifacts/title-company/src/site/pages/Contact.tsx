@@ -21,8 +21,8 @@ export default function Contact() {
           {/* Reassurance */}
           <div>
             <Kicker light>The Guided Quote</Kicker>
-            <h2 className="mt-5 font-display text-4xl font-medium sm:text-5xl">Ready when <span className="script text-champagne">you are</span></h2>
-            <p className="mt-5 max-w-md text-lg leading-relaxed text-cream/70">
+            <h2 className="mt-5 font-display text-[1.7rem] font-semibold sm:text-4xl lg:text-5xl">Ready when <span className="script text-champagne">you are</span></h2>
+            <p className="mt-5 max-w-md text-[0.95rem] sm:text-lg leading-relaxed text-cream/70">
               No long forms. Just four quick steps — and you'll see a working closing estimate before you ever hit submit.
             </p>
             <div className="mt-8 space-y-4">

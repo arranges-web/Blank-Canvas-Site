@@ -20,7 +20,7 @@ export default function PageHero({
   crumb: string;
 }) {
   return (
-    <section className="relative isolate flex min-h-[62vh] items-end overflow-hidden pb-14 pt-40">
+    <section className="relative isolate flex min-h-[48vh] items-end overflow-hidden pb-10 pt-28 sm:min-h-[62vh] sm:pb-14 sm:pt-40">
       <div className="absolute inset-0 z-0">
         <img src={image} alt="" className="h-full w-full object-cover" loading="eager" />
       </div>
@@ -45,7 +45,7 @@ export default function PageHero({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.12, duration: 0.7 }}
-          className="mt-5 max-w-3xl font-display text-4xl font-medium text-cream sm:text-6xl"
+          className="mt-4 max-w-3xl font-display text-3xl font-semibold text-cream sm:text-5xl lg:text-6xl"
         >
           {title} {italic && <span className="script text-champagne">{italic}</span>}
         </motion.h1>
@@ -53,7 +53,7 @@ export default function PageHero({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.7 }}
-          className="mt-5 max-w-xl text-lg leading-relaxed text-cream/75"
+          className="mt-5 max-w-xl text-[0.95rem] sm:text-lg leading-relaxed text-cream/75"
         >
           {subtitle}
         </motion.p>

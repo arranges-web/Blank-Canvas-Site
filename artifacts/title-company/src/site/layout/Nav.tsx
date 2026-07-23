@@ -205,7 +205,7 @@ export default function Nav() {
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
                     className={cn(
-                      'flex items-baseline justify-between border-b border-white/10 py-4 font-display text-3xl transition',
+                      'flex items-baseline justify-between border-b border-white/10 py-3 font-display text-2xl transition',
                       isActive(item.href) ? 'text-champagne' : 'text-cream hover:text-champagne',
                     )}
                   >

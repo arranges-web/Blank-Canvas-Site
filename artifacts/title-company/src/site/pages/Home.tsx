@@ -30,7 +30,7 @@ export default function Home() {
 
         <motion.div
           style={{ opacity: fade }}
-          className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-12 px-6 pt-28 pb-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8"
+          className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-10 px-6 pt-24 pb-16 sm:pt-28 sm:pb-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8"
         >
           <div>
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
@@ -41,7 +41,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.1 }}
-              className="mt-6 max-w-2xl font-display text-[2.9rem] font-medium leading-[1.03] text-cream sm:text-[4.4rem]"
+              className="mt-6 max-w-2xl font-display text-[2rem] font-semibold leading-[1.08] text-cream sm:text-[3.4rem] lg:text-[4.4rem]"
             >
               The art of a flawless <span className="script text-champagne">closing.</span>
             </motion.h1>
@@ -50,7 +50,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.2 }}
-              className="mt-6 max-w-xl text-lg leading-relaxed text-cream/80"
+              className="mt-6 max-w-xl text-[0.95rem] sm:text-lg leading-relaxed text-cream/80"
             >
               {COMPANY.intro}
             </motion.p>
@@ -92,7 +92,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-5 flex items-end gap-3">
-                <span className="font-display text-5xl font-semibold text-navy">{TRUST.googleRating}</span>
+                <span className="font-display text-4xl font-semibold text-navy sm:text-5xl">{TRUST.googleRating}</span>
                 <div className="pb-1.5">
                   <Stars />
                   <p className="mt-1 text-xs text-muted-foreground">Excellent client rating</p>
@@ -124,25 +124,25 @@ export default function Home() {
       <TrustStrip />
 
       {/* ---------------- PROMISE ---------------- */}
-      <section className="bg-cream py-24 sm:py-32">
-        <div className="mx-auto grid max-w-[1280px] items-center gap-14 px-6 lg:grid-cols-2 lg:px-8">
+      <section className="bg-cream py-14 sm:py-20 lg:py-32">
+        <div className="mx-auto grid max-w-[1280px] items-center gap-10 px-6 lg:gap-14 lg:grid-cols-2 lg:px-8">
           <Reveal>
             <div className="relative">
               <div className="overflow-hidden rounded-[2rem] shadow-float">
                 <img src="/assets/about-bg.jpg" alt="A Florida Hometown closing" className="h-[28rem] w-full object-cover" loading="lazy" />
               </div>
               <div className="absolute -bottom-8 -right-4 flex w-60 items-center gap-4 rounded-2xl border border-border bg-white p-5 shadow-float sm:right-8">
-                <span className="font-display text-5xl font-semibold text-navy"><Counter to={20} suffix="+" /></span>
+                <span className="font-display text-4xl font-semibold text-navy sm:text-5xl"><Counter to={20} suffix="+" /></span>
                 <p className="text-sm text-muted-foreground">years guiding Southwest Florida home</p>
               </div>
             </div>
           </Reveal>
           <Reveal delay={0.1}>
             <Kicker>Our Promise</Kicker>
-            <h2 className="mt-5 font-display text-4xl font-medium text-navy sm:text-5xl">
+            <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">
               A closing should feel <span className="script text-orange">calm</span>, not chaotic.
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{COMPANY.mission}</p>
+            <p className="mt-6 text-[0.95rem] sm:text-lg leading-relaxed text-muted-foreground">{COMPANY.mission}</p>
             <div className="mt-8 grid grid-cols-3 gap-4">
               {PILLARS.map((p) => {
                 const Icon = PILLAR_ICON[p.icon];
@@ -159,19 +159,19 @@ export default function Home() {
       </section>
 
       {/* ---------------- SERVICES PREVIEW ---------------- */}
-      <section className="bg-white py-24 sm:py-32">
+      <section className="bg-white py-14 sm:py-20 lg:py-32">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
           <Reveal className="flex flex-col items-end justify-between gap-6 sm:flex-row">
             <div className="max-w-xl">
               <Kicker>What We Do</Kicker>
-              <h2 className="mt-5 font-display text-4xl font-medium text-navy sm:text-5xl">
+              <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">
                 Full-service title &amp; escrow, under one roof
               </h2>
             </div>
             <BrandButton to={ROUTES.services} variant="outline" size="sm">All services <ArrowUpRight className="h-4 w-4" /></BrandButton>
           </Reveal>
 
-          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 sm:mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s, i) => {
               const Icon = SVC_ICON[s.icon];
               return (
@@ -200,17 +200,17 @@ export default function Home() {
       </section>
 
       {/* ---------------- PILLARS + STATS (dark) ---------------- */}
-      <section className="relative overflow-hidden bg-navy py-24 text-cream sm:py-32">
+      <section className="relative overflow-hidden bg-navy py-14 text-cream sm:py-20 lg:py-32">
         <div className="pointer-events-none absolute -right-40 top-0 h-96 w-96 rounded-full bg-champagne/10 blur-[120px]" />
         <div className="pointer-events-none absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-orange/10 blur-[120px]" />
         <div className="relative mx-auto max-w-[1280px] px-6 lg:px-8">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker light>Why Florida Hometown</Kicker>
-            <h2 className="mt-5 font-display text-4xl font-medium sm:text-5xl">
+            <h2 className="mt-5 font-display text-[1.7rem] font-semibold sm:text-4xl lg:text-5xl">
               Excellence, <span className="script text-champagne">quietly delivered</span>
             </h2>
           </Reveal>
-          <div className="mt-16 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 sm:mt-16 grid gap-6 md:grid-cols-3">
             {PILLARS.map((p, i) => {
               const Icon = PILLAR_ICON[p.icon];
               return (
@@ -228,10 +228,10 @@ export default function Home() {
             })}
           </div>
           <Reveal delay={0.15}>
-            <div className="mt-16 grid grid-cols-2 gap-x-6 gap-y-10 rounded-3xl border border-white/10 bg-white/[0.03] px-8 py-10 lg:grid-cols-4">
+            <div className="mt-10 sm:mt-16 grid grid-cols-2 gap-x-6 gap-y-10 rounded-3xl border border-white/10 bg-white/[0.03] px-8 py-10 lg:grid-cols-4">
               {TRUST.stats.map((s) => (
                 <div key={s.label} className="text-center">
-                  <div className="font-display text-4xl font-semibold text-champagne sm:text-5xl"><Counter to={s.value} suffix={s.suffix} /></div>
+                  <div className="font-display text-3xl font-semibold text-champagne sm:text-4xl lg:text-5xl"><Counter to={s.value} suffix={s.suffix} /></div>
                   <p className="mt-2 text-sm text-cream/60">{s.label}</p>
                 </div>
               ))}
@@ -241,13 +241,13 @@ export default function Home() {
       </section>
 
       {/* ---------------- PROCESS ---------------- */}
-      <section className="bg-cream py-24 sm:py-32">
+      <section className="bg-cream py-14 sm:py-20 lg:py-32">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
           <Reveal className="mx-auto max-w-2xl text-center">
             <Kicker>The Journey</Kicker>
-            <h2 className="mt-5 font-display text-4xl font-medium text-navy sm:text-5xl">Four steps to the keys</h2>
+            <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">Four steps to the keys</h2>
           </Reveal>
-          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 sm:mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {PROCESS.map((step, i) => (
               <Reveal key={step.num} delay={i * 0.08}>
                 <div className="relative h-full rounded-3xl border border-border bg-white p-7 shadow-soft">
@@ -265,16 +265,16 @@ export default function Home() {
       <CostEstimator />
 
       {/* ---------------- LOCATIONS PREVIEW ---------------- */}
-      <section className="bg-white py-24 sm:py-32">
+      <section className="bg-white py-14 sm:py-20 lg:py-32">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
           <Reveal className="flex flex-col items-end justify-between gap-6 sm:flex-row">
             <div className="max-w-xl">
               <Kicker>Our Locations</Kicker>
-              <h2 className="mt-5 font-display text-4xl font-medium text-navy sm:text-5xl">Six offices, one local team</h2>
+              <h2 className="mt-5 font-display text-[1.7rem] font-semibold text-navy sm:text-4xl lg:text-5xl">Six offices, one local team</h2>
             </div>
             <BrandButton to={ROUTES.locations} variant="outline" size="sm">All locations <ArrowUpRight className="h-4 w-4" /></BrandButton>
           </Reveal>
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 sm:mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {LOCATIONS.map((l, i) => (
               <Reveal key={l.city} delay={(i % 3) * 0.08}>
                 <a href={l.maps} target="_blank" rel="noopener noreferrer" className="group block overflow-hidden rounded-3xl border border-border bg-cream shadow-soft transition-all duration-400 hover:-translate-y-1.5 hover:shadow-float">
