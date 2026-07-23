@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-border: hsl(var(--border));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --font-sans: 'Georgia', serif;
+}
+
+:root {
+  --background: 210 20% 98%;
+  --foreground: 215 40% 15%;
+  --primary: 215 60% 22%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 42 70% 50%;
+  --secondary-foreground: 215 40% 15%;
+  --muted: 210 15% 92%;
+  --muted-foreground: 215 20% 45%;
+  --accent: 42 70% 50%;
+  --border: 210 20% 85%;
+  --card: 0 0% 100%;
+  --card-foreground: 215 40% 15%;
+}
+
+@layer base {
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: Georgia, serif;
+    line-height: 1.6;
+  }
+}
